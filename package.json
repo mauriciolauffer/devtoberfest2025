@@ -1,0 +1,41 @@
+{
+  "name": "devtoberfest2025",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^9",
+    "express": "^4"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@cap-js/cds-test": "^0.4.0",
+    "@cap-js/cds-types": "^0.13.0",
+    "@cap-js/sqlite": "^2",
+    "jest": "^30.2.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "test": "node --test test/*.test.js",
+    "test:cov": "node --test --experimental-test-coverage --test-coverage-functions=95 test/*.test.js",
+    "test:jest": "jest"
+  },
+  "sapux": [
+    "app/admin-books",
+    "app/browse"
+  ],
+  "cds": {
+    "log": {
+      "levels": {
+        "deploy": "silent",
+        "odata": "silent",
+        "cds": "silent",
+        "cds.serve": "silent"
+      }
+    }
+  }
+}
